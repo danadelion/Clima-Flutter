@@ -106,11 +106,16 @@ class _LocationScreenState extends State<LocationScreen> {
                       style: kTempTextStyle,
                     ),
                     SizedBox(
-                      width: 30.0,
+                      width: 50.0,
                     ),
-                    Text(
-                      weatherIcon,
-                      style: kConditionTextStyle,
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          weatherIcon,
+                          style: kConditionTextStyle,
+                        ),
+                      ),
                     ),
                   ],
                 ),
@@ -119,9 +124,12 @@ class _LocationScreenState extends State<LocationScreen> {
                 padding: EdgeInsets.only(right: 15.0),
                 child: Text(
                   '$weatherMessage in $cityName',
-                  textAlign: TextAlign.right,
+                  textAlign: TextAlign.left,
                   style: kMessageTextStyle,
                 ),
+              ),
+              SizedBox(
+                height: 5.0,
               ),
             ],
           ),
